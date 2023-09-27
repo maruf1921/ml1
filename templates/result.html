@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<center>
+
+    <br><br><br><br>
+    <h1>Prediction Result</h1>
+    <p>The predicted zone for the given input is: {{ predicted_zone }}</p>
+    <h2>{{ k }} Nearest Neighbors:</h2>
+
+    <ul>
+        {% for neighbor in neighbors %}
+            <li>Neighbor {{ loop.index }}: Zone {{ neighbor['zone'] }}, Distance: {{ neighbor['distance']|round(2) }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Back to Input</a>
+    </center>
+</body>
+</html>

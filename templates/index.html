@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>K-NN Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <center>
+        <br><br><br>
+    <h1>K-NN Classifier</h1>
+    <form action="/predict" method="post">
+        <label for="salary">Enter Salary:</label>
+        <input type="number" id="salary" name="salary" required>
+        <br>
+        <label for="family_member">Enter Family Members:</label>
+        <input type="number" id="family_member" name="family_member" required>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    </center>
+</body>
+</html>
